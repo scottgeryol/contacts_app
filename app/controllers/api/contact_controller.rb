@@ -10,6 +10,7 @@ class Api::ContactController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       phone_number: params[:emai],
+      bio: params[:bio],
     )
     @contact.save
     render "show.json.jb"
@@ -26,6 +27,7 @@ class Api::ContactController < ApplicationController
     @contact.last_name = params[:last_name]
     @contact.email = params[:email]
     @contact.phone_number = params[:phone_number]
+    @contact.bio = params[:bio]
     @contact.save
     render "show.json.jb"
   end
